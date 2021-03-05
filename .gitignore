@@ -8,6 +8,6 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-src/redux/googleApi
+src/redux/googleApi.js
 # macOS
 .DS_Store
