@@ -7,16 +7,17 @@ import {
 	TextInput,
 } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import * as actions from '../../redux/actions/actions';
+import * as actions from '../../redux/actions/countActions';
 const Counter = (props) => {
-	const state = useSelector((state) => state);
+	const state = useSelector((state) => state.count.count);
+	console.log('state******', state);
 	const dispatch = useDispatch();
 	const [input, setinput] = useState();
 	console.log('input----', input);
 	return (
 		<View style={styles.container}>
 			<View>
-				<Text style={styles.counter}>Count: {state.count}</Text>
+				<Text style={styles.counter}>Count: {state}</Text>
 			</View>
 			<View>
 				<TouchableOpacity
