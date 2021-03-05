@@ -1,6 +1,6 @@
 import * as actions from '../actionTypes';
 import axios from 'axios';
-const GOOGLE_API = 'AIzaSyAFcNY6a_668CtawRFZsw4xizaTX2ttt0Q';
+import googleApi from '../../googleApi';
 
 // export const getOrigin = (res) => {
 // 	return {
@@ -13,7 +13,7 @@ export const callApi = (placeid) => {
 	return (dispatch) => {
 		return axios
 			.get(
-				`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=${GOOGLE_API}`
+				`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeid}&key=${googleApi}`
 			)
 			.then((response) => {
 				console.log(
