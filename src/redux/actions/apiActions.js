@@ -1,6 +1,6 @@
 import * as actions from '../actionTypes';
 import axios from 'axios';
-import googleApi from '../../googleApi';
+import googleApi from '../googleApi';
 
 // export const getOrigin = (res) => {
 // 	return {
